@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
 import 'package:flutter_catalog/pages/login_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 //We are importing this package because we are going to use material library.
 //every program's entry point in the most of languages in the main function.
 //Similary in dart and flutter is void main function it's the entry point to the
@@ -29,8 +30,11 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       darkTheme: ThemeData(
           brightness: Brightness.dark, primarySwatch: Colors.blueGrey),
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
-      initialRoute: "/home",
+      theme: ThemeData(
+          primarySwatch: Colors.deepPurple,
+          fontFamily: GoogleFonts.lato().fontFamily,
+          primaryTextTheme: GoogleFonts.latoTextTheme()),
+      // initialRoute: "/home",
       routes: {
         "/": (context) => LoginPage(),
         "/Login": (context) => LoginPage(),
